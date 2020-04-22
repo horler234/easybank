@@ -1,0 +1,441 @@
+$dark-blue: hsl(233, 26%, 24%)
+$lime-green: hsl(136, 65%, 51%)
+$bright-cyan: hsl(192, 70%, 51%)
+$grayish-blue: hsl(233, 8%, 62%)
+$light-grayish-blue: hsl(220, 16%, 96%)
+$very-light-gray: hsl(0, 0%, 98%)
+$white: hsl(0, 0%, 100%)
+
+*
+  margin: 0
+  padding: 0
+
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+  body
+    font-size: 13px
+    font-family: 'Public Sans', sans-serif
+
+$len: 242.776657104492px
+$time: 1.6s
+#outline
+  stroke-dasharray: $len*0.01, $len
+  stroke-dashoffset: 0
+  animation: anim $time linear infinite
+
+@keyframes anim
+  12.5%
+    stroke-dasharray: $len*0.14, $len
+    stroke-dashoffset: -$len*0.11
+  43.75%
+    stroke-dasharray: $len*0.35, $len
+    stroke-dashoffset: -$len*0.35
+  100%
+    stroke-dasharray: $len*0.01, $len
+    stroke-dashoffset: -$len*0.99
+
+
+.check-out
+  position: absolute
+  bottom: 0.5rem
+  left: 50%
+  transform: translateX(-50%)
+  font-size: 2rem
+  color: #fff
+
+#mynav
+  display: none
+  position: relative
+  -webkit-animation-name: oya
+  -webkit-animation-duration: 1s
+  animation-name: oya
+  animation-duration: 1s
+  padding-top: 10px
+
+@-webkit-keyframes oya
+  from
+    bottom: -100px
+    opacity: 0
+
+  to
+    bottom: 0
+    opacity: 1
+
+@keyframes oya
+  from
+    bottom: -100px
+    opacity: 0
+
+  to
+    bottom: 0
+    opacity: 1
+
+#header
+  display: none
+  position: relative
+  -webkit-animation-name: oya
+  -webkit-animation-duration: 1s
+  animation-name: oya
+  animation-duration: 1s
+
+.container
+  width: 90%
+  max-width: 1100px
+  margin: auto
+
+.nav-flex
+  display: flex
+  justify-content: space-between
+
+nav
+  padding: 10px 0
+
+ul
+  display: flex
+  list-style: none
+  margin-top: 2px
+  li a.navlink
+    text-decoration: none
+    color: $grayish-blue
+    transition: .5s ease-in-out
+    margin: 20px
+    padding-bottom: 10px
+    &:hover
+      border-bottom: 2px solid $lime-green
+
+.dropdownLink, .dropdownLink2
+  display: none
+
+button.header-btn
+  padding: 10px 20px
+  background: rgb(49,211,92)
+  background: linear-gradient(90deg, rgba(49,211,92,1) 46%, rgba(43,183,218,1) 87%)
+  border: transparent
+  border-radius: 20px
+  font-size: 12px
+  color: $white
+  font-family: inherit
+  cursor: pointer
+  transition: .4s ease-in-out
+  &:focus
+    outline: none
+  &:hover
+    background: rgb(88,219,123)
+    background: linear-gradient(90deg, rgba(88,219,123,1) 46%, rgba(88,187,212,1) 87%)
+
+.header-flex
+  // display: flex
+  // justify-content: space-between
+
+.header-text-container
+  width: 30%
+  padding-top: 150px
+
+
+.header-img-container
+  width: 50%
+
+img.desktop
+  width: 1000px
+  // object-position: 50% 30%
+  margin-left: 400px
+  margin-top: -590px
+  // position: relative
+
+
+img.mobile
+  display: none
+
+h1.next
+  font-size: 44px
+  margin-bottom: 20px
+  font-weight: 400
+  color: $dark-blue
+
+header
+  padding-left: 130px
+  overflow: hidden
+  background: rgb(250,250,250)
+  background: linear-gradient(180deg, rgba(250,250,250,1) 80%, rgba(243,244,246,1) 80%)
+
+p.take
+  font-size: 14px
+  color: $grayish-blue
+  margin-bottom: 20px
+  line-height: 1.5
+
+img.phone-img
+  margin-left: 560px
+  margin-top: -750px
+
+section
+  background: $light-grayish-blue
+
+.talk
+  position: relative
+
+h1.why
+  font-size: 28px
+  color: $dark-blue
+  margin-bottom: 15px
+  font-weight: 400
+
+p.why-explain
+  font-size: 14px
+  width: 500px
+  line-height: 1.5
+  color: $grayish-blue
+
+img.icon-exp
+  width: 50px
+
+.section-flex
+  display: flex
+  justify-content: space-between
+  margin-top: 50px
+  flex-wrap: wrap
+
+.smallie
+  width: 21%
+
+p.online-text
+  font-size: 14px
+  color: $grayish-blue
+  line-height: 1.5
+
+p.online
+  font-size: 18px
+  color: $dark-blue
+  margin: 20px 0
+
+#about
+  display: none
+  position: relative
+  -webkit-animation-name: oya
+  -webkit-animation-duration: 1s
+  animation-name: oya
+  animation-duration: 1s
+  padding-bottom: 80px
+
+#blog
+  background: $very-light-gray
+  padding-bottom: 50px
+  padding-top: 100px
+  display: none
+  position: relative
+  -webkit-animation-name: oya
+  -webkit-animation-duration: 1s
+  animation-name: oya
+  animation-duration: 1s
+  padding-bottom: 80px
+
+.img-talk
+  width: 23%
+  border-radius: 5px
+  background: #fff
+
+img.curve-img
+  width: 100%
+  border-radius: 5px 5px 0 0
+  height: 168px
+
+p.name
+  font-size: 10px
+  margin: 20px 0 10px 0
+
+a.exp-link
+  text-decoration: none
+  color: $dark-blue
+  font-size: 18px
+  &:hover
+    color: $lime-green
+
+p.sheperu
+  font-size: 13px
+  color: $grayish-blue
+  line-height: 1.5
+  margin-top: 10px
+
+.shikena
+  margin-left: 20px
+  margin-right: 40px
+  margin-bottom: 20px
+
+svg.wave
+  display: none
+
+footer
+  background: $dark-blue
+  padding: 30px 0
+  color: #fff
+  display: none
+
+img.footer-logo
+  display: block
+  margin-bottom: 50px
+
+a.footer-icons
+  text-decoration: none
+  margin-right: 10px
+
+a.footer-links
+  color: inherit
+  text-decoration: none
+  display: block
+  margin-bottom: 15px
+  &:hover
+    color: $lime-green
+
+.footer-flex
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+
+.copyright
+  font-size: 10px
+  margin-top: 20px
+
+.col-1
+  width: 15%
+
+h1.code-lord
+  text-align: center
+  font-size: 30px
+  margin-top: 40px
+  color: #a69a9a
+  -webkit-animation: disappear 1s infinite ease-in-out
+  animation: disappear 1s infinite ease-in-out
+
+@-webkit-keyframes disappear
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+@keyframes disappear
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+@media (max-width: 768px)
+  ul.nav-list li a.navlink
+    display: none
+
+  button.header-btn.shoot
+    display: none
+
+  ul.nav-list li.dropdownLink
+      display: block
+      position: absolute
+      right: 30px
+
+  ul.nav-list.responsive li.dropdownLink
+    display: none
+
+  ul.nav-list.responsive
+      flex-direction: column
+      text-align: center
+      width: 250px
+      margin-left: -200px
+      -webkit-box-shadow: -1px 1px 12px 0px rgba(0,0,0,0.75)
+      -moz-box-shadow: -1px 1px 12px 0px rgba(0,0,0,0.75)
+      box-shadow: -1px 1px 12px 0px rgba(0,0,0,0.75)
+      background: #fff
+      height: 230px
+      margin-top: 50px
+      border-radius: 5px
+      position: absolute
+      z-index: 1
+      -webkit-animation: disappear 1s ease-in-out
+      animation: disappear 1s ease-in-out
+
+  ul.nav-list.responsive li
+      position: relative
+      top: 30px
+      line-height: 2
+
+  ul.nav-list.responsive li.dropdownLink2
+      display: block
+      position: absolute
+      top: -50px
+      right: -30px
+      background: none
+
+  ul.nav-list.responsive li a.navlink,
+      margin: 0
+      display: block
+      padding-left: 0
+      &:hover
+        border: none
+
+  header
+    padding: 0
+    height: auto
+    overflow: auto
+    background: $very-light-gray
+
+  .header-img-container
+    display: none
+
+  .header-text-container
+    text-align: center
+    width: 90%
+    margin: auto
+
+  h1.next
+    font-size: 35px
+
+  svg.wave
+    display: block
+    margin-top: 50px
+
+  img.desktop
+    display: none
+
+  img.phone-img
+    display: none
+
+  #about
+    text-align: center
+
+  h1.why
+    font-size: 24px
+
+  p.why-explain
+    width: 100%
+
+  .smallie
+    width: 100%
+    margin-bottom: 50px
+
+  .section-flex
+    justify-content: space-around
+
+  .img-talk
+    width: 100%
+    margin-bottom: 50px
+
+
+  .col-1,
+  .col-2,
+  .col-3
+    width: 100%
+
+  .footer-flex
+    justify-content: space-around
+
+  footer
+    text-align: center
+
+  img.footer-logo
+    width: 139px
+    margin: auto
+    margin-bottom: 40px
+
+  .col-1
+    margin-bottom: 40px
